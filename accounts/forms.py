@@ -71,17 +71,15 @@ class registration_form(UserCreationForm):
     )
 
     country = forms.ChoiceField(
-        choices=CountryField().choices,
+        choices=[('', 'Select your country')] + list(CountryField().choices),  # ← placeholder
         required=True,
         widget=CountrySelectWidget(attrs={
-            'class': 'input-text country-select',
-            'required': 'required'
+            'class': 'input-text country-flag-select',
         }),
         error_messages={
             'required': 'Please select your country.'
         }
     )
-
     phone_number = PhoneNumberFormField(
         required=True,
         widget=forms.TextInput(attrs={

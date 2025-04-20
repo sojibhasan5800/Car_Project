@@ -73,34 +73,45 @@
 
                      {% comment %} Approach->1 Backend Dveloper FormWays dataPass {% endcomment %}
 
-                     <form action="{% url 'register' %}" method="POST"  >
+                     <form action="{% url 'register' %}" method="POST"  novalidate >
 
                         {% csrf_token %}
                           
                         {% for field in form %}
-                                <div class="form-group form-box">
-                                    {{ field }}
-                                    {% if field.errors %}
-                                        <div class="text-danger">{{ field.errors|striptags }}</div>
-                                    {% endif %}
-                                    {% if field.name == 'email' %}
-                                        <i class="flaticon-mail"></i>
-                                    {% elif field.name == 'password1' or field.name == 'password2' %}
-                                        <i class="flaticon-lock"></i>
-                                    {% else %}
-                                        <i class="fa fa-user"></i>
-                                    {% endif %}
-
-                                    {% if field.name == 'username' %}
-                                        {% if field.help_text %}
-                                        <small class="form-text text-muted">{{ field.help_text }}</small>
-                                       
+                        {% if field.name == 'country' %}
+                            <!-- country ফিল্ডের জন্য আলাদা UI -->
+                            <div class="form-group form-box" style="position: relative;">
+                                {{ field }}
+                                <i class="fa fa-globe" style="
+                                    position: absolute;
+                                    left: 15px;
+                                    top: 50%;
+                                    transform: translateY(-35%);
+                                    color: #888;"></i>
+                            </div>
+                        {% else %}
+                            <!-- অন্যান্য ফিল্ডের জন্য সাধারণ ডিজাইন -->
+                            <div class="form-group form-box">
+                                {{ field }}
+                                {% if field.errors %}
+                                    <div class="text-danger">{{ field.errors|striptags }}</div>
                                 {% endif %}
-                                
-                                    {% endif %}
-
-                                </div>
-                        {% endfor %}
+                    
+                                {% if field.name == 'email' %}
+                                    <i class="flaticon-mail"></i>
+                                {% elif field.name == 'password1' or field.name == 'password2' %}
+                                    <i class="flaticon-lock"></i>
+                                {% else %}
+                                    <i class="fa fa-user"></i>
+                                {% endif %}
+                    
+                                {% if field.name == 'username' and field.help_text %}
+                                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    
 
                           <div class="form-group mb-0 clearfix">
                               <button type="submit" class="btn-md btn-success float-left">Register</button>

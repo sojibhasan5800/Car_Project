@@ -9914,3 +9914,30 @@ a.nav-link.active {
 .nav-tabs .nav-link.active {
   color: #fff !important;
 }
+
+/* static/css/flags.css */
+.country-flag-select {
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* Right side padding for flag */
+  font-size: 15px;
+  background-color: transparent;
+  outline: 0;
+  color: #717171;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Flag styling */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 24px 16px;
+  
+  /* Center align text */
+  text-align: center;
+
+  /* Remove default dropdown arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
