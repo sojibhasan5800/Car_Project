@@ -6,14 +6,7 @@ from django_countries.fields import CountryField
 from phonenumber_field.formfields import PhoneNumberField  as PhoneNumberFormField
 from django_countries.widgets import CountrySelectWidget
 
-# Custom Country Widget without flags
-class NoFlagCountrySelectWidget(CountrySelectWidget):
-    def render(self, name, value, attrs=None, renderer=None):
-        if attrs is None:
-            attrs = {}
-        attrs['class'] = 'input-text country-flag-select'
-        return super().render(name, value, attrs, renderer)
-    
+
 # last chatgptcode reqauired every field use 
 class registration_form(UserCreationForm):
 
@@ -78,13 +71,16 @@ class registration_form(UserCreationForm):
     )
 
     country = forms.ChoiceField(
-            choices=[('', 'Select your country')] + list(CountryField().choices),
-            required=True,
-            widget=NoFlagCountrySelectWidget(),
-            error_messages={
-                'required': 'Please select your country.'
-            }
-        )
+        choices=[('', 'Select your country')] + list(CountryField().choices),
+        required=True,
+        widget=forms.Select(attrs={
+            'class': 'input-text select-country-with-flag',  # This is used by Select2
+        }),
+        error_messages={
+            'required': 'Please select your country.'
+        }
+    )
+
     phone_number = PhoneNumberFormField(
         required=True,
         widget=forms.TextInput(attrs={

@@ -35,8 +35,8 @@ def inquiry(request):
         first_name=first_name, last_name=last_name, customer_need=customer_need, city=city,
         state=state, email=email, phone=phone, message=message)
 
-        admin_info = User.objects.get(is_superuser=True)
-        user_email = admin_info.email
+        
+        user_email = request.POST['email']
         our_email = EMAIL_HOST_USER
         print(user_email,our_email)
         send_mail(
