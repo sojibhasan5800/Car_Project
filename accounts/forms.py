@@ -74,7 +74,7 @@ class registration_form(UserCreationForm):
         choices=CountryField().choices,
         required=True,
         widget=CountrySelectWidget(attrs={
-            'class': 'input-text',
+            'class': 'input-text country-select',
             'required': 'required'
         }),
         error_messages={
