@@ -21,7 +21,7 @@ MouseInfo
 mysql-connector-python
 numpy
 opencv-python
-opencv_contrib-4.10.0
+opencv-contrib-python==4.8.1.78
 packaging
 phonenumbers
 pillow
