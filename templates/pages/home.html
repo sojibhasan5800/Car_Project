@@ -120,7 +120,8 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-              {% for car in featured_cars %}
+              
+                {% for car in featured_cars %}
                 <div class="slick-slide-item">
                     <div class="car-box-3">
                         <div class="car-thumbnail">
@@ -185,8 +186,7 @@
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-
+            {% endfor %} 
             </div>
             <div class="slick-btn">
                 <div class="slick-prev slick-arrow-buton sab-4">
@@ -196,6 +196,7 @@
                     <i class="fa fa-angle-right"></i>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

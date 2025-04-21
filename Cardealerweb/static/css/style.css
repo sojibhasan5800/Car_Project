@@ -2833,6 +2833,7 @@ input[type="checkbox"]:checked + label:before {
   border-radius: 5px;
   height: 35px;
   position: relative;
+  
 }
 
 .slick-btn .slick-next {
@@ -9917,23 +9918,34 @@ a.nav-link.active {
 }
 
 /* static/css/flags.css */
-.country-select-container {
-  position: relative;
-}
-
-.country-select-container select {
+.country-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   width: 100%;
-  padding-right: 50px;
+  margin-bottom: 6px;
+  padding: 15px;
 }
 
 .country-flag-icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  height: 24px;
-  width: 36px;
+  width: 30px;
+  height: 20px;
   object-fit: contain;
-  pointer-events: none;
-  z-index: 10;
+}
+
+/* Select2 text center করার জন্য */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  text-align: center;
+  width: 100%;
+  
+}
+
+/* ড্রপডাউন আইটেমে ফ্ল্যাগ এবং টেক্সট */
+.select2-results__option img,
+.select2-selection__rendered img {
+
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
 }

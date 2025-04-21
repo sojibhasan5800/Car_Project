@@ -34,6 +34,9 @@ def home(request):
         else:
             print(f"❌ Car with VIN {vin_no} already exists!")
 
+
+    
+
         
     teams = Team.objects.all()
     featured_cars = Car.objects.order_by('-created_date').filter(is_featured=True)

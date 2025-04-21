@@ -1,0 +1,72 @@
+[
+{
+    "model": "pages.team",
+    "pk": 1,
+    "fields": {
+        "first_name": "Martin",
+        "last_name": "Smith",
+        "designation": "Founder",
+        "photo": "photos/2020/07/05/avatar-11.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2020-07-05T10:32:47.294Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 2,
+    "fields": {
+        "first_name": "Stone",
+        "last_name": "Carolyn",
+        "designation": "Creative Director",
+        "photo": "photos/2020/07/05/avatar-9.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2020-07-05T10:35:10.860Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 3,
+    "fields": {
+        "first_name": "Brandon",
+        "last_name": "Miller",
+        "designation": "Co-Founder",
+        "photo": "photos/2020/07/05/avatar-1.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2020-07-05T10:36:06.917Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 4,
+    "fields": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "designation": "CEO",
+        "photo": "photos/2020/07/05/avatar-12.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2020-07-05T10:36:36.967Z"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 5,
+    "fields": {
+        "first_name": "Michelle",
+        "last_name": "Nelson",
+        "designation": "Support Manager",
+        "photo": "photos/2020/07/05/avatar-10.jpg",
+        "facebook_link": "https://facebook.com",
+        "twitter_link": "https://twitter.com",
+        "google_plus_link": "https://google.com",
+        "created_date": "2020-07-05T10:37:02.375Z"
+    }
+}
+]

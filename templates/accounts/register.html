@@ -79,18 +79,14 @@
                           
                         {% for field in form %}
                         {% if field.name == 'country' %}
-                            <!-- country ফিল্ডের জন্য আলাদা UI -->
-                            <div class="form-group form-box country-select-wrapper">
-                                <div class="country-select-container">
-                            {{ field }}
-                                <i class="fa fa-globe" style="
-                                    position: absolute;
-                                    left: 15px;
-                                    top: 50%;
-                                    transform: translateY(-35%);
-                                    color: #888;"></i>
-                            </div>
-                        </div>
+                        <div class="country-select-wrapper">
+                            <!-- সিলেক্ট করা দেশের পতাকা -->
+                            <img id="country-flag" src="/static/img/flags/default.jpeg" alt="Country Flag" class="country-flag-icon" />
+                          
+                            <!-- দেশ সিলেক্ট ইনপুট -->
+                            {{field}}
+                          </div>
+                          
                         {% else %}
                             <!-- অন্যান্য ফিল্ডের জন্য সাধারণ ডিজাইন -->
                             <div class="form-group form-box">
