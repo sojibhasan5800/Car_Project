@@ -38,7 +38,7 @@ def inquiry(request):
         
         user_email = request.POST['email']
         our_email = EMAIL_HOST_USER
-        print(user_email,our_email)
+        
         send_mail(
                 'New Car Inquiry',
                 'You have a new inquiry for the car ' + car_title + '. Please login to your admin panel for more info.',
