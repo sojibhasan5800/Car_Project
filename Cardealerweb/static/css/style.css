@@ -2833,7 +2833,6 @@ input[type="checkbox"]:checked + label:before {
   border-radius: 5px;
   height: 35px;
   position: relative;
-  
 }
 
 .slick-btn .slick-next {
@@ -3262,7 +3261,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .pricing-1 .plan-header {
-  background-color: #ee0505;
+  background-color: #fff;
   padding: 40px 22px 0;
   border-width: 1px;
   position: relative;
@@ -3814,8 +3813,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .intro-section {
-  /* padding: 30px 0 25px; */
-  padding: 1px;
+  padding: 30px 0 25px;
 }
 
 .intro-text h3 {
@@ -9685,7 +9683,6 @@ input[type="tel"] {
     padding: 60px 0 30px;
   }
 
-
   .content-area-5 {
     padding: 60px 0;
   }
@@ -9917,7 +9914,6 @@ a.nav-link.active {
   color: #fff !important;
 }
 
-
 /* static/css/flags.css */
 .country-select-wrapper {
   display: flex;
@@ -9951,4 +9947,5 @@ a.nav-link.active {
   margin-right: 8px;
   vertical-align: middle;
 }
+
 
