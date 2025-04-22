@@ -3262,7 +3262,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .pricing-1 .plan-header {
-  background-color: #fff;
+  background-color: #ee0505;
   padding: 40px 22px 0;
   border-width: 1px;
   position: relative;
@@ -9917,6 +9917,7 @@ a.nav-link.active {
   color: #fff !important;
 }
 
+
 /* static/css/flags.css */
 .country-select-wrapper {
   display: flex;
@@ -9932,6 +9933,7 @@ a.nav-link.active {
   height: 20px;
   object-fit: contain;
 }
+
 
 /* Select2 text center করার জন্য */
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -9949,3 +9951,4 @@ a.nav-link.active {
   margin-right: 8px;
   vertical-align: middle;
 }
+

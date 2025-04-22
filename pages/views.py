@@ -12,11 +12,11 @@ from django.utils.dateparse import parse_datetime
 # Create your views here.
 
 def home(request):
-    json_path = os.path.join(settings.BASE_DIR,'cars_api.json')
-    with open(json_path,'r',encoding='utf-8') as file:
-        data = json.load(file)
+    json_car_path = os.path.join(settings.BASE_DIR,'cars_api.json')
+    with open(json_car_path,'r',encoding='utf-8') as file:
+        cars_data = json.load(file)
     
-    for item in data:
+    for item in cars_data:
         fields = item['fields']
         vin_no = fields.get('vin_no')
 
@@ -33,6 +33,29 @@ def home(request):
                 print(f"❌ Error saving car: {e}")
         else:
             print(f"❌ Car with VIN {vin_no} already exists!")
+
+    json_team_path = os.path.join(settings.BASE_DIR, 'team_api.json')
+    with open(json_team_path, 'r', encoding='utf-8') as file:
+        team_data = json.load(file)
+
+    for item in team_data:
+        pk = item['pk']  # JSON এ থাকা প্রতিটি team member এর pk/id
+        fields = item['fields']
+
+        # যদি এই ID দিয়ে ডেটা আগে থেকেই ডেটাবেজে থাকে, তাহলে skip করবে
+        if not Team.objects.filter(pk=pk).exists():
+            # created_date ফিল্ড থাকলে সেটাকে datetime format এ রূপান্তর করা
+            if 'created_date' in fields:
+                fields['created_date'] = parse_datetime(fields['created_date'])
+
+            try:
+                # নতুন team member create (id সহ)
+                Team.objects.create(id=pk, **fields)
+                print(f"✅ Saved: {fields['first_name']} {fields['last_name']} (ID: {pk})")
+            except Exception as e:
+                print(f"❌ Error saving team member with ID {pk}: {e}")
+        else:
+            print(f"⛔ Team member with ID {pk} already exists! Skipping...")
 
 
     
