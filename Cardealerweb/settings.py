@@ -21,12 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = 'django-insecure-@i=3bs6rd*lve-q1@+x$g_=ph!r&4z=zx@xx&on0tqt9y(xh_3'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://car-project-1-yhxo.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://car-project-dmd3.onrender.com']
+ 
 
 # Application definition
 
@@ -97,7 +100,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')  
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD') 
-
+# EMAIL_HOST_USER = 'sojib@gmail.com'  
+# EMAIL_HOST_PASSWORD = 'kvxbrrotplghnxzx'
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
