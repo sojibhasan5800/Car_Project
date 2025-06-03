@@ -1,0 +1,49 @@
+Project Title: CalderWebProject
+Developer: Sojib Hasan
+Technology Stack: Django · Python · HTML5 · CSS3 · Bootstrap · JavaScript · db.sqlite3
+
+---
+
+📌 Project Overview:
+CalderWebProject is a robust, production-ready web application built using the Django web framework. The application showcases a clean and responsive design, intuitive user flow, and modular code structure ideal for business or e-commerce platforms.
+
+---
+
+💡 Key Features:
+- ✅ Modular Django app architecture
+- ✅ Dynamic URL routing and view rendering
+- ✅ DRY template management using `{% include %}` and `{% extends %}`
+- ✅ Secure authentication system using Django’s built-in auth
+- ✅ Mobile-first responsive design powered by Bootstrap 4/5
+- ✅ Dynamic navbar with active route highlighting
+- ✅ Conditional visibility for mobile: hides login/register UI on small devices to improve UX
+
+---
+
+📱 Mobile UX Highlight:
+This project includes a smart conditional feature that **hides login and register options on smaller screen sizes** (e.g., mobile devices). This behavior ensures:
+- Clean and uncluttered navigation
+- Focus on core content for mobile users
+- Enhanced UX through adaptive rendering
+
+(Implemented via JavaScript + Bootstrap breakpoints)
+
+---
+
+🧠 Designed For:
+- Tech recruiters and HR reviewers looking to assess full-stack Django capability
+- Companies seeking responsive, scalable, and secure web solutions
+- Users on desktop and mobile — with tailored UX based on device
+
+---
+
+🔐 Authentication Logic:
+- Register/Login available only on desktop and larger viewports
+- Secure form handling and error reporting
+- Sessions and CSRF protection enabled
+
+---
+
+🛠 Project Status: ✅ MVP Completed | 📦 Ready for Demo
+
+For a live preview or GitHub link, please contact the developer.
