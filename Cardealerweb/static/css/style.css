@@ -9950,29 +9950,3 @@ a.nav-link.active {
 
 
 
-/* =============================
-   🔻 Responsive Fix for Topbar 
-   ============================= */
-@media (max-width: 767px) {
-  .top-header .list-inline {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .top-header .list-inline a {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  .top-header ul.top-social-media {
-    float: none !important;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .top-header ul.top-social-media li {
-    display: inline-block;
-    margin: 5px 5px;
-  }
-}
