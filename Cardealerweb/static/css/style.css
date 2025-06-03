@@ -9159,6 +9159,22 @@ input[type="tel"] {
     padding: 60px 0 30px;
   }
 
+
+  .top-header .list-inline a {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .top-header .top-social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-header .top-social-media li {
+        margin-bottom: 5px;
+    }
+
+
   .inline-search-area .search-col {
     margin-bottom: 10px;
   }
