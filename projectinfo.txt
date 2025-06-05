@@ -1,49 +1,38 @@
-Project Title: CalderWebProject
-Developer: Sojib Hasan
-Technology Stack: Django · Python · HTML5 · CSS3 · Bootstrap · JavaScript · db.sqlite3
+Project Name: Car Listing Web Application  
+Live URL: https://car-project-1-yhxo.onrender.com  
+Tech Stack: Python, Django, Django REST Framework, PostgreSQL, HTML/CSS (if frontend included), Render (deployment)
 
----
+Description:
+This is a web-based car listing platform where users can view, add, and manage car details. The project showcases a RESTful API (and possibly a frontend) that handles various car-related functionalities including:
 
-📌 Project Overview:
-CalderWebProject is a robust, production-ready web application built using the Django web framework. The application showcases a clean and responsive design, intuitive user flow, and modular code structure ideal for business or e-commerce platforms.
+- Viewing a list of available cars
+- Adding new cars with details and image URLs
+- Viewing individual car details
+- Updating or deleting car entries (admin only)
 
----
+Key Features:
+- Django REST Framework used for building APIs
+- PostgreSQL for robust relational data handling
+- Image support via URLs
+- Hosted on Render with a live demo link
+- Clean and modular codebase for scalability
 
-💡 Key Features:
-- ✅ Modular Django app architecture
-- ✅ Dynamic URL routing and view rendering
-- ✅ DRY template management using `{% include %}` and `{% extends %}`
-- ✅ Secure authentication system using Django’s built-in auth
-- ✅ Mobile-first responsive design powered by Bootstrap 4/5
-- ✅ Dynamic navbar with active route highlighting
-- ✅ Conditional visibility for mobile: hides login/register UI on small devices to improve UX
+API Endpoints (examples):
+- `GET /cars/` – List all cars
+- `GET /cars/<id>/` – Retrieve a single car
+- `POST /cars/` – Add a new car
+- `PUT /cars/<id>/` – Update a car
+- `DELETE /cars/<id>/` – Delete a car
 
----
+Authentication:
+(Optional section – include if login/auth is required)
 
-📱 Mobile UX Highlight:
-This project includes a smart conditional feature that **hides login and register options on smaller screen sizes** (e.g., mobile devices). This behavior ensures:
-- Clean and uncluttered navigation
-- Focus on core content for mobile users
-- Enhanced UX through adaptive rendering
+Future Improvements:
+- Add user authentication and permissions
+- Upload images instead of using image URLs
+- Implement frontend UI with React or Django Templates
+- Filter and search options for cars
+- Add pagination and sorting
 
-(Implemented via JavaScript + Bootstrap breakpoints)
-
----
-
-🧠 Designed For:
-- Tech recruiters and HR reviewers looking to assess full-stack Django capability
-- Companies seeking responsive, scalable, and secure web solutions
-- Users on desktop and mobile — with tailored UX based on device
-
----
-
-🔐 Authentication Logic:
-- Register/Login available only on desktop and larger viewports
-- Secure form handling and error reporting
-- Sessions and CSRF protection enabled
-
----
-
-🛠 Project Status: ✅ MVP Completed | 📦 Ready for Demo
-
-For a live preview or GitHub link, please contact the developer.
+Developer:
+Sojib Hasan
