@@ -67,6 +67,28 @@
                         {% endif %}
                          href="{% url 'contact' %}">Contact Us</a>
                     </li>
+
+
+<!-- Login & Register (Mobile Only) -->
+{% if user.is_authenticated %}
+
+<div class="login-register-mobile d-lg-none text-center mt-4">
+    <a href="{% url 'logout' %}" class="btn custom-login-btn mb-2">Logout</a>
+    <a href="{% url 'dashboard' %}" class="btn custom-register-btn">Dashboard</a>
+</div>
+
+{% else %}
+
+<div class="login-register-mobile d-lg-none text-center mt-4">
+    <a href="{% url 'login' %}" class="btn custom-login-btn mb-2">Login</a>
+    <a href="{% url 'register' %}" class="btn custom-register-btn">Register</a>
+</div>
+{% endif %}
+
+
+
+
+
                     <li class="nav-item dropdown ">
                         <a href="#full-page-search" class="nav-link h-icon">
                             <i class="fa fa-search"></i>

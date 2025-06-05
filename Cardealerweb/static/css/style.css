@@ -9950,3 +9950,106 @@ a.nav-link.active {
 
 
 
+/* Custom styling for mobile breakpoint */
+@media (max-width: 957px) {
+    .login-register-links {
+        display: none !important;
+    }
+
+    .login-register-mobile {
+        display: block !important;
+    }
+}
+
+@media (min-width: 958px) {
+    .login-register-mobile {
+        display: none !important;
+    }
+}
+/* Hide on large screens */
+.login-register-mobile {
+    display: none;
+}
+
+/* Mobile-specific button styles */
+.login-register-mobile {
+    padding: 0 1rem;
+}
+
+.login-register-mobile .btn {
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login button - outline style */
+.custom-login-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #007bff;
+    background-color: #5b69bc;
+}
+
+.custom-login-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Register/Dashboard button - filled style */
+.custom-register-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    margin-top: 10px;
+}
+
+.custom-register-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+/* Make buttons stack with spacing */
+.login-register-mobile .btn + .btn {
+    margin-top: 10px;
+}
+
+.topbar-small-screen {
+  display: none;
+  background: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+}
+/* Hide by default */
+.topbar-small-screen {
+  display: none;
+  font-size: 14px;
+}
+
+/* Show and wrap on screen <= 995px */
+@media screen and (max-width: 995px) {
+  .topbar-small-screen {
+    display: block !important;
+    padding: 10px;
+    background-color: #f8f9fa; /* optional for better visibility */
+  }
+
+  .topbar-small-screen a {
+    display: block; /* wrap to new line on small screen */
+    margin-bottom: 5px;
+  }
+}
+
+/* Icon color */
+.icon-color {
+  color: red;
+}
+.icon-txt{
+  color: black;
+  font-size: 18px;
+}
+
